@@ -42,6 +42,7 @@ describe('SongQueue', function() {
       var songQueue = new SongQueue([songData1, songData2]);
       song2 = songQueue.at(1);
       expect(songQueue.length).to.equal(2);
+      console.log('songQueue.length:',songQueue);
       songQueue.at(0).trigger('ended');
       expect(songQueue.length).to.equal(1);
       expect(songQueue.at(0)).to.equal(song2);
@@ -58,6 +59,7 @@ describe('SongQueue', function() {
     describe('if there are no songs left in the queue', function() {
       it('does nothing', function() {
         var songQueue = new SongQueue(songData1);
+        // console.log('songQueue', songQueue);
         songQueue.at(0).ended();
         expect(playSpy).to.have.not.been.called;
       });

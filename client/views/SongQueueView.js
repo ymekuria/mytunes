@@ -8,7 +8,7 @@ var SongQueueView = Backbone.View.extend({
   },
   initialize: function() {
     //this.collection.on('add', this.collection.playFirst,this);
-    this.songQueueEntryView = new SongQueueEntryView({});
+    this.songQueueEntryView = new SongQueueEntryView({});// need to come back to and add to passed-in object 
 
     this.render();
   },
