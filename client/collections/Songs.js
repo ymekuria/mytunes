@@ -3,11 +3,6 @@ var Songs = Backbone.Collection.extend({
 
   model: SongModel
   
-  // \initialize: function() {
 
-  //   this.model.on('add', function() {
-  //     playFirst();
-  //   })
-  // },
 
 });
